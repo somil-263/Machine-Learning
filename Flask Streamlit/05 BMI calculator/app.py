@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st  # type: ignore
 
 st.title("⚖️ Premium BMI Calculator")
 st.markdown("---")
@@ -8,9 +8,9 @@ col1, col2, col3 = st.columns(3)
 with col1:
     heightft = st.number_input("Height (Feet)", min_value=1, max_value=8, value=5, step=1)
 with col2:
-    heightin = st.number_input("Height (Inches)", min_value=0, max_value=11, value=7, step=1)
+    heightin = st.number_input("Height (Inches)", min_value=0, max_value=11, value=9, step=1)
 with col3:
-    weight = st.number_input("Weight (in kg)", min_value=1, value=65, step=1)
+    weight = st.number_input("Weight (in kg)", min_value=1, value=57, step=1)
 
 total_inches = heightin + (heightft * 12)
 
